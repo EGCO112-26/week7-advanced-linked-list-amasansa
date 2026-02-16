@@ -144,7 +144,7 @@ void printList( LLPtr currentPtr )
          currentPtr = currentPtr->nextPtr;
       } // end while
 
-      printf( "%d %s --> NULL\n",currentPtr->id ,currentPtr->name);
+      printf( "%d %s -->NULL\n",currentPtr->id ,currentPtr->name);
        
 
      
@@ -159,11 +159,11 @@ void printListR( LLPtr currentPtr ){
       while(currentPtr->nextPtr!=NULL){
          currentPtr=currentPtr->nextPtr;
       }
-      puts("The list in reverse is : ");
-      while(currentPtr!=NULL){
+      //puts("The list in reverse is : ");
+      while(currentPtr->pPtr!=NULL){
          printf( "%d %s --> ", currentPtr->id ,currentPtr->name);
          currentPtr=currentPtr->pPtr;
       }
-      puts("NULL");
+      printf( "%d %s -->NULL\n", currentPtr->id, currentPtr->name );
    }
 }
